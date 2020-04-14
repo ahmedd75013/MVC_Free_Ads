@@ -1,8 +1,9 @@
 <?php
+namespace App\Http\Controllers;
 
 class IndexController {
     public function showIndex()
     {
-        echo '<h1>hello World</h1>';
+        return view('index');
     }
 }

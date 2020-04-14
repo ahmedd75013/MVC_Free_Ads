@@ -13,7 +13,7 @@
         <nav>
         </nav>
     </header>
- <h1>helloss</h1>
+ <h1>page index</h1>
 </body>
 
 </html>
