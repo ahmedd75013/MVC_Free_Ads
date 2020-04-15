@@ -15,6 +15,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@showIndex');
 
+Route::get('/inscription', function () {
+    return view('inscription');
+});
+
+Route::post('/inscription',function(){
+
+    $utilisateur = new App\Utilisateur;
+    $utilisateur->nom = request('nom');
+    $utilisateur->prenom = request('prenom');
+    $utilisateur->email = request('email');
+    $utilisateur->password = request('password');
+
+    $utilisateur->save();
+
+    return "Nous avons recu votre email qui est " .request('email');
+   
+});
+
+
 // Route::get('/', function () {
 //     return view('index');
 // });
+
