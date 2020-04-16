@@ -1,6 +1,6 @@
 
 @extends('layout')
-@section('contenu')
+@section('content')
 
  <div class="title m-b-md">
     page d acceuil

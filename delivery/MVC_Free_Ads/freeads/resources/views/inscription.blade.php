@@ -26,7 +26,11 @@
         
         </div>
 
-     
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email"  name="email_verified_at" >
+        
+        </div>
 
       <div class="form-group">
         <label for="mdp">Password</label>

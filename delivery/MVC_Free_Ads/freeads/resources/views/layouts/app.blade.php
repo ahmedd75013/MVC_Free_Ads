@@ -33,7 +33,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    <li class ="nav-item">
 
+<a href="" class="nav-link">Ajouter une annonce</a>
+</li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -60,7 +63,15 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('user.edit')}}">
+                                    {{ _('Edit details') }}
+                                    </a>
 
+
+
+                                  
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -76,5 +87,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="/js/app.js"></script>
 </body>
 </html>

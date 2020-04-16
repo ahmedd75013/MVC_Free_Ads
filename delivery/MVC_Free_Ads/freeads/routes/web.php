@@ -13,28 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@showIndex');
-
+Route::get('/', 'IndexController@showIndex')->middleware('verified');
 Route::get('/inscription', function () {
     return view('inscription');
 });
+Auth::routes(['verify' => true]);
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/edit/user', 'UserController@edit')->name('user.edit');
+Route::post('/edit/user', 'UserController@update')->name('user.update');
 
-Route::post('/inscription',function(){
 
-    $utilisateur = new App\Utilisateur;
-    $utilisateur->nom = request('nom');
-    $utilisateur->prenom = request('prenom');
-    $utilisateur->email = request('email');
-    $utilisateur->password = request('password');
 
-    $utilisateur->save();
 
-    return "Nous avons recu votre email qui est " .request('email');
+// Route::post('/inscription',function(){
+
+//     $utilisateurs = new App\Utilisateur;
+//     $utilisateurs->nom = request('nom');
+//     $utilisateurs->prenom = request('prenom');
+//     $utilisateurs->email = request('email');
+//     $utilisateurs->email_verified_at = request('email_verified_at');
+//     $utilisateurs->password = request('password');
+
+//     $utilisateurs->save();
+
+//     // return "Nous avons recu votre email qui est " .request('email');
    
-});
-
-
+// });
 // Route::get('/', function () {
 //     return view('index');
 // });
-
