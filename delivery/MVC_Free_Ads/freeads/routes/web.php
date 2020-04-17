@@ -17,11 +17,41 @@ Route::get('/', 'IndexController@showIndex')->middleware('verified');
 Auth::routes(['verify' => true]);
 Route::get('posts/posts', function () {return view('posts');});
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/user/edit', 'UserController@edit')->name('user.edit');
-Route::post('/user/edit', 'UserController@update')->name('user.update');
+Route::get('/edit/user', 'UserController@edit')->name('user.edit');
+Route::post('/edit/user', 'UserController@update')->name('user.update');
 Route::get('/annonce', 'AnnonceController@create')->name('annonce.create');
 Route::post('/annonce/create','AnnonceController@store')->name('annonce.store');
+
 Route::get('/', function () {return view('layout');});
+
+Route::get('/show', 'AnnonceController@show');
+Route::get('/posts/show', 'AnnonceController@show')->name('show');
+
+Route::post('/posts/update/{id}', 'AnnonceController@update')->name('update');
+Route::get('/posts/edit/{id}', 'AnnonceController@edit')->name('edit');
+
+
+Route::get('/search' ,'AnnonceController@search')->name('annonce.search');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

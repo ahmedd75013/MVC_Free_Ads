@@ -23,7 +23,8 @@ class UserController extends Controller
         }
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
        $user = User::find(Auth::user()->id);
 
        if($user){
