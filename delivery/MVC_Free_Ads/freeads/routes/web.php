@@ -14,16 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@showIndex')->middleware('verified');
-Route::get('/inscription', function () {
-    return view('inscription');
-});
 Auth::routes(['verify' => true]);
+Route::get('posts/posts', function () {return view('posts');});
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/edit/user', 'UserController@edit')->name('user.edit');
-Route::post('/edit/user', 'UserController@update')->name('user.update');
+Route::get('/user/edit', 'UserController@edit')->name('user.edit');
+Route::post('/user/edit', 'UserController@update')->name('user.update');
+Route::get('/annonce', 'AnnonceController@create')->name('annonce.create');
+Route::post('/annonce/create','AnnonceController@store')->name('annonce.store');
+Route::get('/', function () {return view('layout');});
 
 
 
+
+
+
+// Route::get('/posts','PostsController@index');
 
 // Route::post('/inscription',function(){
 
@@ -37,8 +42,8 @@ Route::post('/edit/user', 'UserController@update')->name('user.update');
 //     $utilisateurs->save();
 
 //     // return "Nous avons recu votre email qui est " .request('email');
-   
+// Route::get('/inscription', function () {
+//     return view('inscription');
 // });
-// Route::get('/', function () {
-//     return view('index');
+   
 // });
