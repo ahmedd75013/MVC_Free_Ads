@@ -11,7 +11,7 @@
       <div class="card-body">
         <h5 class="card-title"><?php echo e($value->title); ?></h5>
         <p class="card-text"><?php echo e($value->description); ?></p>
-        <h3 class="card-title"><?php echo e($value->price); ?></h3>
+        <h3 class="card-title"><?php echo e($value->price); ?> $</h3>
 
         <a href ="<?php echo e(route('edit',$value->id)); ?>" class="btn btn-primary">
         <i class="fa fa-pencil">Modifier</i>

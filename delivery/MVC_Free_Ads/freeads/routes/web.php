@@ -44,11 +44,6 @@ Route::get('/search' ,'AnnonceController@search')->name('annonce.search');
 Route::get('/message/{seller_id}/{ad_id}', 'MessageController@create')->name('message.create');
 
 
-Route::get('/message/{seller_id}/{ad_id}', 'MessageController@create')->name('message.create');
-
-Route::get('/message/{seller_id}/{ad_id}', 'MessageController@create')->name('message.create');
-
-
 
 
 
