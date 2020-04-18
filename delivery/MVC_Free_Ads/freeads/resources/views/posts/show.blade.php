@@ -23,9 +23,7 @@
         <a href ="#" class="btn btn-danger">
         <i class="fa fa-pencil">Supprime</i>
         </a>
-   
-
-
+  
         </a>
       </div>
     </div>

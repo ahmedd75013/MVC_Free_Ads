@@ -13,28 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@showIndex')->middleware('verified');
-Auth::routes(['verify' => true]);
-Route::get('posts/posts', function () {return view('posts');});
+/**home */
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'IndexController@showIndex')->middleware('verified');
+Route::get('/', function () {return view('layout');});
+Auth::routes(['verify' => true]);
+
+
+/**user */
 Route::get('/edit/user', 'UserController@edit')->name('user.edit');
 Route::post('/edit/user', 'UserController@update')->name('user.update');
+
+
+/**Annonce */
+Route::get('posts/posts', function () {return view('posts');});
 Route::get('/annonce', 'AnnonceController@create')->name('annonce.create');
 Route::post('/annonce/create','AnnonceController@store')->name('annonce.store');
-
-Route::get('/', function () {return view('layout');});
-
 Route::get('/show', 'AnnonceController@show');
-Route::get('/posts/show', 'AnnonceController@show')->name('show');
-
 Route::post('/posts/update/{id}', 'AnnonceController@update')->name('update');
 Route::get('/posts/edit/{id}', 'AnnonceController@edit')->name('edit');
+Route::get('/posts/show', 'AnnonceController@show')->name('show');
 
 
+/* search */
 Route::get('/search' ,'AnnonceController@search')->name('annonce.search');
 
 
+/* Message */
 
+Route::get('/message/{seller_id}/{ad_id}', 'MessageController@create')->name('message.create');
 
 
 
