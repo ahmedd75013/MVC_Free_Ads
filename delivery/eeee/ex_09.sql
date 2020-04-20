@@ -1,0 +1,1 @@
+SELECT duree_min AS "Duree du film le plus court" from film WHERE duree_min IS NOT NULL ORDER BY duree_min ASC LIMIT 1;

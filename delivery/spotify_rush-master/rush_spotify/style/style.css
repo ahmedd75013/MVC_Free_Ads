@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(to bottom right, rgb(224, 89, 89), rgb(255, 201, 52));
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+header {
+    padding: 20px;
+    background-color: black;
+}
+#logo {
+    width: 135px;
+    float: left;
+    padding-left: 160px;
+    margin-top: 15px;
+}
+h1 {
+    color: white;
+    width: 40%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 50px;
+    margin-left: 320px;
+}
+h2 {
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    padding: 7px;
+    font-style: italic;
+    font-size: 35px;
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    /*position: absolute;*/ 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+}
+.div__principal {
+    background-color: rgb(65, 65, 65, 0.75);
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    border-radius: 4px;
+    
+}
+/*MENU JS*/
+#menu_js {
+    color: white;
+    width: 40%;
+    position: absolute;
+    top: 97px;
+    right: 170px;
+}
+/*MENU*/
+#menu_js ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    text-align:center;
+}
+#menu_js li {
+    float:right;
+    margin:auto;
+    padding: 10px;
+    font-size: 22px;
+    background-color: black;
+    border-right: 1px solid white;
+    margin-top: -600;
+}
+#menu_js li a {
+    display:block;
+    width:100px;
+    color:white;
+    text-decoration:none;
+    padding:5px;
+}

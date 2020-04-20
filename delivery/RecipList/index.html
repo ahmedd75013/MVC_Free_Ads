@@ -1,0 +1,33 @@
+ 
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>CV</title>
+  <link rel="stylesheet" href="essai.css">
+  <script src="script.js"></script>
+</head>
+<body>
+ 
+<div><h1> Curiculum Vitae (CV) </h1></div>
+ 
+<button id="aperçu"> Aperçu </button>
+<div id="r">Voici le <b>CV</b> de la personne. Pour le voir veuillez cliquer sur le <strong>bouton</strong> <i>aperçu</i> ci-dessous SVP.</div>
+ 
+<script src="jquery.js"></script>
+<script>
+    $(function() {
+        $('#aperçu').click(function() {
+            $.getJSON('recipes.json', function(donnees) {
+            $('#r').html('<p><b>Nom</b> : ' + donnees.nom + '</p>');
+            $('#r').append('<p><b>Age</b> : ' + donnees.age + '</p>');
+            $('#r').append('<p><b>Ville</b> : ' + donnees.ville + '</p>');
+            $('#r').append('<p><b>Domaine de compétences</b> : ' + donnees.domaine + '</p>');
+            });
+        });
+    });
+</script>
+ 
+</body>
+ 
+</html>

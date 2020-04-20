@@ -1,0 +1,1 @@
+SELECT ROUND(avg(duree_min),2) as"Average duration" FROM film;

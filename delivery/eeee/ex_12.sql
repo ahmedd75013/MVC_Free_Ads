@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS "Nombre de films 'western'" FROM film LEFT JOIN genre ON film.id_genre = genre.id_genre LEFT JOIN distrib ON film.id_distrib = distrib.id_distrib WHERE (genre.nom = "western") AND (distrib.nom IN ("tartan films","lionsgate uk") OR titre LIKE UPPER("T%"));

@@ -1,0 +1,1 @@
+select f.titre from film f left join genre g on f.id_genre=g.id_genre where g.nom='action' or g.nom='romance';

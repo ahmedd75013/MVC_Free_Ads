@@ -1,0 +1,1 @@
+select film.titre as "Titre du film", distrib.nom as "Nom du distributeur" from film inner join distrib on film.id_distrib=distrib.id_distrib where film.id_film IN (21,87,263,413,633);

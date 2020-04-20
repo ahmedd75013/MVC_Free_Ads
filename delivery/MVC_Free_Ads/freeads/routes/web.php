@@ -20,6 +20,7 @@ Route::get('/', function () {return view('layout');});
 Auth::routes(['verify' => true]);
 
 
+
 /**user */
 Route::get('/edit/user', 'UserController@edit')->name('user.edit');
 Route::post('/edit/user', 'UserController@update')->name('user.update');
