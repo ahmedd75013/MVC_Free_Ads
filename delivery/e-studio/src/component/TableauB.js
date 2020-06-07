@@ -64,8 +64,7 @@ export default function ClippedDrawer() {
             
               <ListItem button >
                 <ListItemIcon>
-                  <InboxIc
-                  on /> 
+                  <InboxIcon /> 
                 </ListItemIcon>
                 <ListItemText primary= 'Home' />
               </ListItem>
